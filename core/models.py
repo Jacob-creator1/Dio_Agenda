@@ -9,6 +9,7 @@ class Evento(models.Model):
     data_evento = models.DateTimeField(verbose_name='Data do evento')
     data_criacao = models.DateTimeField(auto_now=True, verbose_name='Data da Criação')
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    local_evento = models.CharField(max_length=100)
 
     class Meta:
         db_table = 'evento'
